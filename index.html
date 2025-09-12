@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Training Recommender</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Firebase libs -->
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="welcomeText">Welcome</h1>
+      <div class="top-row">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect">
+          <option value="en">English</option>
+          <option value="tl">Tagalog</option>
+          <option value="ilo">Ilokano</option>
+        </select>
+      </div>
+    </header>
+
+    <section id="authSection" class="card">
+      <h2 id="authTitle">Sign In / Register</h2>
+      <input id="email" type="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <button id="signInBtn">Sign In / Register</button>
+    </section>
+
+    <section id="questionSection" class="card" style="display:none;">
+      <h2 id="questionHeader">Questionnaire</h2>
+      <div id="questionsDiv"></div>
+      <button id="submitBtn">Submit</button>
+    </section>
+
+    <section id="recommendationsSection" class="card" style="display:none;">
+      <h2 id="recHeader">Recommendations</h2>
+      <div id="recList"></div>
+    </section>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

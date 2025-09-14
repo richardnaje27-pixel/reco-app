@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Training Recommender</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Firebase libs -->
+  <!-- Firebase compat scripts (easy script-tag method) -->
   <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js"></script>
@@ -29,6 +29,7 @@
       <input id="email" type="email" placeholder="Email" />
       <input id="password" type="password" placeholder="Password" />
       <button id="signInBtn">Sign In / Register</button>
+      <p id="authMsg" style="color:crimson; display:none;"></p>
     </section>
 
     <section id="questionSection" class="card" style="display:none;">
@@ -42,9 +43,28 @@
       <div id="recList"></div>
     </section>
 
-
+    <footer>
+      <small>Made with Firebase • Translate & customize freely</small>
+    </footer>
   </div>
 
+  <!-- Firebase config & init (replace if you want to use a different project) -->
+  <script>
+    // Paste your firebaseConfig here (I used the config you provided)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBcJ9mvAoGzvGO_do7TQSn9J1x5xNZZNKg",
+      authDomain: "reco-app-6e52a.firebaseapp.com",
+      projectId: "reco-app-6e52a",
+      storageBucket: "reco-app-6e52a.appspot.com",
+      messagingSenderId: "832983633879",
+      appId: "1:832983633879:web:601392af3ef9ea3cf6c592"
+    };
+
+    // Initialize firebase (compat)
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Your app script -->
   <script src="script.js"></script>
 </body>
 </html>
